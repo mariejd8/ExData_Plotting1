@@ -11,6 +11,7 @@ with(powerfeb, plot(DateTime, Sub_metering_1, type="l", ylab="Energy sub meterin
 lines(powerfeb$DateTime, powerfeb$Sub_metering_2, col="red")
 lines(powerfeb$DateTime, powerfeb$Sub_metering_3, col="blue")
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-       col=c("black", "red", "blue"), lty=c(1,1,1), xjust=1)
+       col=c("black", "red", "blue"), lty=c(1,1,1), cex=0.8)
 
-png('plot3.png')
+dev.copy(png, 'plot3.png')
+dev.off()
